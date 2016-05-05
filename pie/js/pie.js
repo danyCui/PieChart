@@ -36,7 +36,7 @@ var pie=function(obj){
 	            },
 	        series: [{
 	        	type:'pie',
-	            name: 'Brands',
+	            name: obj.name,
 	            colorByPoint: true,
 	            data: obj.data
 	        }]
