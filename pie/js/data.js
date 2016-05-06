@@ -25,7 +25,7 @@ var piedata=[
                 num:54329
             }, 
             {
-                name: 'Proprietary or Undetectable',
+                name: 'Undetectable',
                 y: 0.2,
                 num:54329
             }];

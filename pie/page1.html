@@ -5,65 +5,110 @@
 	<link rel="stylesheet" type="text/css" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
 </head>
 <body>
-	<div class="col-sm-9">
-		<div class="my-tabs">
-			<ul class="nav nav-tabs" id="tablists">
-			   <li class="active" data-class="browser"><a href="#browser-tab" data-toggle="tab">浏览器类型占比</a></li>
-			   <li data-class="system"><a href="#system-tab" data-toggle="tab">网站系统占比</a></li>
-			</ul>
-			<div class="tab-content">
-				<form class="navbar-form tab-pane fade in active" id="browser-tab">
-					<div class="form-group col-lg-9">
-							<label for="">站点类型：</label>
-							<label class="radio-inline">
-								<input  type="radio" name="siteOption" value="ALL" checked> ALL
-   							</label>
-   							<label class="radio-inline">
-								<input  type="radio" name="siteOption" value="STABLE"> STABLE
-   							</label>
-   							<label class="radio-inline">
-								<input  type="radio" name="siteOption" value="BETA"> BETA
-   							</label>
+	<!-- <header class="col-lg-12"></header>
+	<div class="col-lg-3">
+		
+	</div> -->
+	<div class="main-charts col-lg-9 col-lg-offset-3">
+		<div class="panel panel-default">
+		   <div class="panel-heading">
+		      数据类型统计
+		   </div>
+		   <div class="panel-body" id="line-chart">
+		      
+		   </div>
+		</div>	
+		<div class="panel panel-default">
+			<div class="panel-heading clearfix">
+				<ul class="nav nav-pills" id="tablists">
+				   <li class="active" data-class="browser"><a href="#browser-tab" data-toggle="tab">浏览器类型占比</a></li>
+				   <li data-class="system"><a href="#system-tab" data-toggle="tab">网站系统占比</a></li>
+				</ul>
+			</div>
+			<div class="panel-body">
+				
+				<div class="tab-content">
+					<form class="navbar-form tab-pane fade in active" id="browser-tab">
+						<div class="form-group col-lg-12">
+								<label for="">站点类型：</label>
+								<label class="radio-inline">
+									<input  type="radio" name="siteOption" value="ALL" checked> ALL
+	   							</label>
+	   							<label class="radio-inline">
+									<input  type="radio" name="siteOption" value="STABLE"> STABLE
+	   							</label>
+	   							<label class="radio-inline">
+									<input  type="radio" name="siteOption" value="BETA"> BETA
+	   							</label>
+						</div>
+						<div class="form-group col-lg-12">
+								<label for="">系统类型：</label>
+								<label class="radio-inline">
+									<input  type="radio" name="systemOption" value="ALL" checked> ALL
+	   							</label>
+	   							<label class="radio-inline">
+									<input  type="radio" name="systemOption" value="Android"> Android
+	   							</label>
+	   							<label class="radio-inline">
+									<input  type="radio" name="systemOption" value="IOS"> IOS
+	   							</label>
+						</div>
+					</form>
+					<form class="navbar-form tab-pane fade" id="system-tab">
+						<div class="form-group col-lg-9" >
+								<label for="">站点类型：</label>
+								<label class="radio-inline">
+									<input  type="radio" name="siteOption" value="ALL" checked> ALL
+	   							</label>
+	   							<label class="radio-inline">
+									<input  type="radio" name="siteOption" value="STABLE"> STABLE
+	   							</label>
+	   							<label class="radio-inline">
+									<input  type="radio" name="siteOption" value="BETA"> BETA
+	   							</label>
+						</div>
+					</form>
+				</div>
+				<div class="main-charts-pie" >
+					<div id="container1" class="container1 "></div>
+					<div class="panel panel-default div-sys-ver">
+						<div class="panel-heading">系统版本占比</div>
+						<div id="container2" class="container2 "></div>
 					</div>
-					<div class="form-group col-lg-9">
-							<label for="">系统类型：</label>
-							<label class="radio-inline">
-								<input  type="radio" name="systemOption" value="ALL" checked> ALL
-   							</label>
-   							<label class="radio-inline">
-								<input  type="radio" name="systemOption" value="Android"> Android
-   							</label>
-   							<label class="radio-inline">
-								<input  type="radio" name="systemOption" value="IOS"> IOS
-   							</label>
-					</div>
-				</form>
-				<form class="navbar-form tab-pane fade" id="system-tab">
-					<div class="form-group col-lg-9" >
-							<label for="">站点类型：</label>
-							<label class="radio-inline">
-								<input  type="radio" name="siteOption" value="ALL" checked> ALL
-   							</label>
-   							<label class="radio-inline">
-								<input  type="radio" name="siteOption" value="STABLE"> STABLE
-   							</label>
-   							<label class="radio-inline">
-								<input  type="radio" name="siteOption" value="BETA"> BETA
-   							</label>
-					</div>
-				</form>
+				</div>
 			</div>
 		</div>
-		<div class="main">
-			<div id="container1" class="container1"></div>
-			<div id="container2" class="container2"></div>
-		</div>
+
+		<div class="panel panel-default">
+		   <div class="panel-heading">
+		      畅言前端功能统计
+		   </div>
+		   <div class="panel-body" >
+		   		<div class="form-group col-lg-9" >
+					<label for="">站点类型：</label>
+					<label class="radio-inline">
+						<input  type="radio" name="siteOption" value="ALL" checked> ALL
+						</label>
+						<label class="radio-inline">
+						<input  type="radio" name="siteOption" value="STABLE"> STABLE
+						</label>
+						<label class="radio-inline">
+						<input  type="radio" name="siteOption" value="BETA"> BETA
+					</label>
+				</div>
+		      <div id="bar-chart"></div>
+		   </div>
+		</div>	
+
+		
 	</div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
 <script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
 <script type="text/javascript" src="js/pie.js"></script>
+<script type="text/javascript" src="js/line.js"></script>
+<script type="text/javascript" src="js/bar.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/page1.js"></script>
 </body>

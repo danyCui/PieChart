@@ -1,9 +1,18 @@
+header{
+	height: 50px;
+	background:#f5f5f5;
+}
 .data-table{
 	vertical-align: middle;
 	margin:0 auto;
 }
+.div-sys-ver{
+	display: none;
+}
 .container1,.container2{
 	padding-top: 10px;
+	width:100%;
+	/*border:1px solid #f5f5f5;*/
 	display: inline-block;
 }
 .system-tab{
