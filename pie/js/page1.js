@@ -78,5 +78,7 @@ $(function () {
     	$('#container2').empty();
     	creatSP(); 	
     });
-
+    $('#fun-statistic input').on('change',function(){
+       bar(barobj('#bar-chart','畅言前端功能统计数据',xAxis,'Temperature (°C)',piedata));
+    });
 });
